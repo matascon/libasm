@@ -198,7 +198,7 @@ int		main(void)
 		var[i] = '\0';
 	fd = open("test.txt", O_RDONLY);
 	
-	printf("\033[1;36mFT_READ #1: ---> return: \033[0m<%i>\n\033[1;36m\t    ---> result: \033[0m<%s>\n", result = ft_read(fd, var, "something"), var);
+	printf("\033[1;36mFT_READ #2: ---> return: \033[0m<%i>\n\033[1;36m\t    ---> result: \033[0m<%s>\n", result = ft_read(fd, var, "something"), var);
 	printf("Errno value is: %d\n", errno);
 	perror("Error");
 
@@ -207,7 +207,7 @@ int		main(void)
 		var[i] = '\0';
 	fd = open("test.txt", O_RDONLY);
 	
-	printf("\033[1;36mREAD #1: ---> return: \033[0m<%i>\n\033[1;36m\t ---> result:\033[0m<%s>\n", result = read(fd, var, "something"), var);
+	printf("\033[1;36mREAD #2: ---> return: \033[0m<%i>\n\033[1;36m\t ---> result:\033[0m<%s>\n", result = read(fd, var, "something"), var);
 	printf("Errno value is: %d\n", errno);
 	perror("Error");
 
@@ -217,7 +217,7 @@ int		main(void)
 
 	printf("\n\033[1;31m|-----| FT_ATOI_BASE |-----|\033[0m\n\n");
 
-	result = ft_atoi_base("-    +--  -+  +--2a", "0123456789abcdef");
+	result = ft_atoi_base("-    +--  -+ -  +--10e7", "0123456789abcdef");
 	printf("\033[1;31mFT_ATOI_BASE TEST: ---> result:\033[0m %d\n", result);
 
 	return (0);

@@ -10,8 +10,8 @@ _ft_strcpy:
 copy:
 	cmp		byte[rsi + rcx], 0
 	je		end
-	mov		dl, byte[rsi + rcx]
-	mov		byte[rax + rcx], dl
+	mov		r8b, byte[rsi + rcx]
+	mov		byte[rax + rcx], r8b
 	inc		rcx
 	jmp		copy
 

@@ -7,10 +7,10 @@ _ft_strcmp:
 	jmp		compare
 
 compare:
-	mov		dl, byte[rdi + rcx]
-	cmp		byte[rsi + rcx], dl
+	mov		r9b, byte[rdi + rcx]
+	cmp		byte[rsi + rcx], r9b
 	jne		end
-	cmp		dl, 0
+	cmp		r9b, 0
 	je		end
 	inc		rcx
 	jmp		compare
