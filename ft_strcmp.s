@@ -17,6 +17,6 @@ compare:
 
 end:
 	movzx	rax, byte[rdi + rcx]
-	movzx	rdx, byte[rsi + rcx]
-	sub		rax, rdx
+	movzx	r8, byte[rsi + rcx]
+	sub		rax, r8
 	ret
